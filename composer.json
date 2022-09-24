@@ -1,0 +1,17 @@
+{
+    "name": "calvinkent/dummyjson",
+    "autoload": {
+        "psr-4": {
+            "Calvinkent\\Dummyjson\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "clvnknt",
+            "email": "p.calvinkent@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}
