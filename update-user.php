@@ -9,9 +9,10 @@ $client = new Client([
 
 $users = [
   'json' => [
-  'firstName' => 'John',
-  'maidenName' => 'Johnny',
-  'lastName' => 'Doe',
+  'firstName' => 'Test',
+  'maidenName' => 'Maidenless',
+  'lastName' => 'Player',
+  'email' => 'test@email.com'
   ]
 ];
 
@@ -34,8 +35,15 @@ $user = json_decode($body);
     <title>Update User</title>
 </head>
 <body>
+    <!-- As a heading -->
+ <nav class="navbar bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Update User Information</span>
+  </div>
+</nav>
+
 <div class = "container"> 
-        <table class="table table-striped">
+    <table class="table table-dark table-striped">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -51,7 +59,7 @@ $user = json_decode($body);
                 <tbody>
                     <tr>
                         <th scope="row"><?= $user->id?></th>
-                        <td><?= $user->firstName?><?= " "?><?= $user->maidenName?><?= " "?><?= $user->lastName?></td>
+                        <td><?=$user->firstName . ' '.  $user->maidenName . ' ' . $user->lastName;?></td>
                         <td><?= $user->age ?></td>
                         <td><?= $user->gender?></td>
                         <td><?= $user->email?></td>

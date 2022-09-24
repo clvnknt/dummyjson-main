@@ -39,30 +39,37 @@ $user = json_decode($body);
     <title>Delete User</title>
 </head>
 <body>
+     <!-- As a heading -->
+ <nav class="navbar bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Delete User: User Information Deleted</span>
+  </div>
+</nav>
+
 <div class = "container"> 
-        <table class="table table-striped">
+<table class="table table-dark table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Complete Name</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Gender</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Blood Type</th>
-                        <th scope="col">Image</th>
+                        <th>ID</th>
+                        <th>Complete Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Blood Type</th>
+                        <th>Image</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"><?= $user->id?></th>
+                        <th><?= $user->id?></th>
                         <td><?= $user->firstName?><?= " "?><?= $user->maidenName?><?= " "?><?= $user->lastName?></td>
                         <td><?= $user->age ?></td>
                         <td><?= $user->gender?></td>
                         <td><?= $user->email?></td>
                         <td><?= $user->phone?></td>
                         <td><?= $user->bloodGroup?></td>
-                        <td><img src="<?= $user->image?>" width="100" length="100"></td>
+                        <td><img src="<?= $user->image?>" width="70" length="70"></td>
                     </tr>
                 </tbody>
  </table>

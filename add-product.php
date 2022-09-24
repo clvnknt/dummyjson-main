@@ -39,8 +39,16 @@ $product = json_decode($body);
     <title>Add Product</title>
 </head>
 <body>
+
+ <!-- As a heading -->
+ <nav class="navbar bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Add Product</span>
+  </div>
+</nav>
+
         <div class = "container"> 
-        <table class="table table-striped">
+        <table class="table table-dark table-striped">
                 <thead>
                         <tr>
                                 <th scope="col">ID</th>

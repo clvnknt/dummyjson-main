@@ -27,17 +27,23 @@ $product_category= json_decode($body, true);
 </head>
 <body>
 <body>
+  <!-- As a heading -->
+ <nav class="navbar bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Products Categories</span>
+  </div>
+</nav>
         <div class = "container">
-           <table class="table table-striped">
+        <table class="table table-dark table-striped">
              <thead>
                <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-                <th scope="col">Brand</th>
-                <th scope="col">Category</th>
-                <th scope="col">Thumbnail</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Brand</th>
+                <th>Category</th>
+                <th>Thumbnail</th>
                 </tr>
               </thead>
         <tbody>
@@ -45,7 +51,7 @@ $product_category= json_decode($body, true);
         foreach ($product_category['products'] as $product){
         ?>
           <tr>
-            <th scope="row" href="single-product.php"><?= $product['id']; ?></th>
+            <th href="single-product.php"><?= $product['id']; ?></th>
             <td><?= $product['title']; ?></td>
             <td><?= $product['description']; ?></td>
             <td><?= $product['price']; ?></td>

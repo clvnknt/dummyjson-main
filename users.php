@@ -29,10 +29,17 @@ $users = $x->users;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Users List</title>
+    <title>Users</title>
 </head>
 <body>
-<table>
+   <!-- As a heading -->
+ <nav class="navbar bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Users</span>
+  </div>
+</nav>
+
+<table class="table table-dark table-striped">
   <tr>
     <th>ID</th>
     <th>Complete Name</th>
@@ -46,17 +53,17 @@ $users = $x->users;
   
 <tbody>
     <?php
-    foreach ($users as $info):
+    foreach ($users as $user):
     ?>
     <tr>
-        <td><?=$info->id;?></td>
-        <td><?=$info->firstName . ' '.  $info->lastName;?></td>
-        <td><?=$info->age;?></td>
-        <td><?=$info->gender;?></td>
-        <td><?=$info->email;?></td>
-        <td><?=$info->phone;?></td>
-        <td><?=$info->bloodGroup;?></td>
-        <td><?="<img width=150x; height=150x; src=" . $info->image .">";?></td>
+        <td><?=$user->id;?></td>
+        <td><?=$user->firstName . ' '.  $user->maidenName . ' ' . $user->lastName;?></td>
+        <td><?=$user->age;?></td>
+        <td><?=$user->gender;?></td>
+        <td><?=$user->email;?></td>
+        <td><?=$user->phone;?></td>
+        <td><?=$user->bloodGroup;?></td>
+        <td><?="<img width=70x; height=70x; src=" . $user->image .">";?></td>
         
     </tr>
     <?php endforeach; ?>
